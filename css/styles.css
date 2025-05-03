@@ -1,0 +1,55 @@
+:root {
+    --bg-light: #ffffff;
+    --bg-dark: #121212;
+    --text-light: #000000;
+    --text-dark: #ffffff;
+    --accent: #007acc;
+}
+
+[data-theme="light"] {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+}
+
+[data-theme="dark"] {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form {
+    margin-top: 2rem;
+}
+
+input,
+button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+button {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#theme-toggle {
+    background-color: unset;
+}
+
+a {
+    color: var(--accent);
+}
