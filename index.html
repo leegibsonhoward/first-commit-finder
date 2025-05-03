@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub First Commit Finder</title>
+</head>
+<body>
+  <header>
+    <h1>GitHub First Commit Finder</h1>
+    <button id="theme-toggle" aria-label="Toggle Theme">🌓</button>
+  </header>
+
+  <main>
+    <form id="user-form" aria-label="GitHub Username Form">
+      <input type="text" id="username" name="username" placeholder="@username" />
+      <button type="submit">Find First Commit</button>
+    </form>
+
+    <section id="result" aria-live="polite"></section>
+  </main>
+
+  <footer>
+    <p>Built using the <a href="https://docs.github.com/en/rest" target="_blank">GitHub API</a></p>
+  </footer>
+  
+</body>
+</html>
