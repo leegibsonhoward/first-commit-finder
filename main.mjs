@@ -1,5 +1,6 @@
 import { setupThemeSwitcher } from "./modules/theme-switcher.mjs";
 import { constructURL } from './modules/construct-url.mjs';
+import { fetchData } from './modules/fetch-data.mjs';
 
 // Setup debug flag
 let DEBUG = true;
@@ -15,12 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", async (event) => {
         event.preventDefault();
         const username = document.getElementById("username").value.trim();
-        resultSection.textContent = `${username}, Searching...`;
+        resultSection.textContent = "Searching...";
 
          try {
                 // construct url
-                constructURL(username);
+                let url = constructURL(username);
                 
+                // fetch data
+                await fetchData(url);
               
             } catch (error) {
               resultSection.textContent = `Error: ${error.message}`;
