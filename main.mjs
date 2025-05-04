@@ -1,6 +1,7 @@
 import { setupThemeSwitcher } from "./modules/theme-switcher.mjs";
 import { constructURL } from './modules/construct-url.mjs';
 import { fetchData } from './modules/fetch-data.mjs';
+import { processData } from './modules/process-data.mjs';
 
 // Setup debug flag
 let DEBUG = true;
@@ -23,7 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 let url = constructURL(username);
                 
                 // fetch data
-                await fetchData(url);
+                let fetchedCommit = await fetchData(url);
+                
+                processData(fetchedCommit);
               
             } catch (error) {
               resultSection.textContent = `Error: ${error.message}`;
