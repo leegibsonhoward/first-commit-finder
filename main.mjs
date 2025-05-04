@@ -1,5 +1,9 @@
 import { setupThemeSwitcher } from "./modules/theme-switcher.mjs";
 
+// Setup debug flag
+let DEBUG = true;
+export { DEBUG };
+
 document.addEventListener("DOMContentLoaded", () => {
     // theme switcher button toggle 
     setupThemeSwitcher();
