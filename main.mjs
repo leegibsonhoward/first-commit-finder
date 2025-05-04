@@ -2,6 +2,7 @@ import { setupThemeSwitcher } from "./modules/theme-switcher.mjs";
 import { constructURL } from './modules/construct-url.mjs';
 import { fetchData } from './modules/fetch-data.mjs';
 import { processData } from './modules/process-data.mjs';
+import { updateUI } from './modules/update-ui.mjs';
 
 // Setup debug flag
 let DEBUG = true;
@@ -26,7 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 // fetch data
                 let fetchedCommit = await fetchData(url);
                 
-                processData(fetchedCommit);
+                // process data
+                let firstCommit = processData(fetchedCommit);
+
+                // update user interface with data
+                updateUI(firstCommit, resultSection);
               
             } catch (error) {
               resultSection.textContent = `Error: ${error.message}`;
