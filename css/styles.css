@@ -1,25 +1,40 @@
 :root {
-    --bg-light: #ffffff;
-    --bg-dark: #121212;
-    --text-light: #000000;
-    --text-dark: #ffffff;
-    --accent: #007acc;
-}
-
-[data-theme="light"] {
-    background-color: var(--bg-light);
-    color: var(--text-light);
+    --background: #f4f4f2;
+    --surface: #ffffff;
+    --primary: #5a6d6c;
+    --secondary: #8e9a9b;
+    --accent: #aa7962;
+    --text-primary: #2e2e2e;
+    --text-secondary: #5a5a5a;
+    --border: #dcdcdc;
 }
 
 [data-theme="dark"] {
-    background-color: var(--bg-dark);
-    color: var(--text-dark);
+    --background: #1e1f1e;
+    --surface: #2b2c2b;
+    --primary: #aebbb7;
+    --secondary: #7f8c8d;
+    --accent: #d3a58f;
+    --text-primary: #f0f0f0;
+    --text-secondary: #cccccc;
+    --border: #3e3e3e;
 }
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 1rem;
+    font-family: system-ui, sans-serif;
+    background-color: var(--background);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
 }
 
 header {
@@ -27,29 +42,44 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
-form {
-    margin-top: 2rem;
+h1 {
+    color: var(--primary);
 }
 
-input,
-button {
-    padding: 0.5rem;
-    font-size: 1rem;
-    margin-top: 0.5rem;
-}
-
-button {
-    background-color: var(--accent);
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-#theme-toggle {
-    background-color: unset;
+p {
+    color: var(--text-secondary);
 }
 
 a {
     color: var(--accent);
+    text-decoration: none;
+}
+
+.theme-toggle {
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    background: unset;
+    color: var(--surface);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+input,
+button {
+    padding: 0.3rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.submit-btn {
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--accent);
+    color: var(--surface);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
 }

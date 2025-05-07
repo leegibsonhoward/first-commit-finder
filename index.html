@@ -7,18 +7,20 @@
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
+    <div class="container">
   <header>
     <h1>GitHub First Commit Finder</h1>
-    <button id="theme-toggle" aria-label="Toggle Theme">🌓</button>
+    <button class="theme-toggle" aria-label="Toggle Theme">🌓</button>
   </header>
 
   <main>
     <form id="user-form" aria-label="GitHub Username Form">
       <input type="text" autocomplete="username" id="username" name="username" placeholder="@username" />
-      <button type="submit">Find First Commit</button>
+      <button class="submit-btn" type="submit">Find First Commit</button>
     </form>
 
     <section id="result" aria-live="polite"></section>
+    </div>
   </main>
 
   <footer>
