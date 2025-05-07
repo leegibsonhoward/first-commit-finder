@@ -13,9 +13,16 @@ export async function fetchData(url) {
             console.debug(`Fetching Data...`);
             console.debug(data);
         }
+        
+        if(data.items.length === 0) {
+            throw new Error("Data not found!");
+        }
+
         return data;
     } catch (err) {
-        console.error("Error fetching first commit:", err);
+        if (DEBUG) {
+            console.debug(err);            
+        }
         return null;
     }
 }
