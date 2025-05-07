@@ -83,3 +83,11 @@ button {
     cursor: pointer;
     font-size: 1rem;
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 8px;
+    width: 100%;
+    /* Other footer styles */
+  }
