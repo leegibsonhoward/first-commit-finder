@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // update user interface with processed data
             updateUI(firstCommit, resultSection);
         } catch (error) {
-            resultSection.textContent = error.message;
+            resultSection.innerHTML = `<h1>${error.message}</Sh1>`;
             return;
         }
     });
